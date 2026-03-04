@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hezbollah's Ceasefire Violations | AIPAC Policy Briefing Series</title>
+  <style>
+/* ── Reset & Base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: #f0f4f8;
+  color: #1a1a2e;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* ── HEADER ──────────────────────────────────────────────────────────────── */
+.site-header {
+  background: #1a56db;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.22);
+  min-height: 62px;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.site-header .logo {
+  color: #fff;
+  font-size: 1.65rem;
+  font-weight: 900;
+  letter-spacing: 3.5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-flag {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.logo-flag span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+}
+.logo-flag .stripe-top    { background: #fff; }
+.logo-flag .stripe-mid    { background: #c0392b; }
+.logo-flag .stripe-bottom { background: #fff; }
+
+.header-divider {
+  width: 1px;
+  background: rgba(255,255,255,0.25);
+  margin: 10px 0;
+}
+.header-tagline {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+.site-header .series-label {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  align-self: center;
+}
+
+/* ── HERO BANNER ─────────────────────────────────────────────────────────── */
+.hero-banner {
+  background: linear-gradient(135deg, #1443b0 0%, #1a56db 55%, #1e6ae0 100%);
+  text-align: center;
+  padding: 60px 32px 64px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-banner .threat-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.92);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+.hero-banner h1 {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 800;
+  max-width: 820px;
+  margin: 0 auto 16px;
+  line-height: 1.22;
+  position: relative;
+}
+.hero-banner .subhead {
+  color: rgba(255,255,255,0.88);
+  font-size: 1.08rem;
+  max-width: 660px;
+  margin: 0 auto 28px;
+  line-height: 1.65;
+  position: relative;
+}
+.hero-cta-btn {
+  display: inline-block;
+  background: #c0392b;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 7px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.1s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+.hero-cta-btn:hover { background: #a93226; transform: translateY(-2px); }
+
+/* ── TRUST BAR ───────────────────────────────────────────────────────────── */
+.trust-bar {
+  background: #fff;
+  border-bottom: 2px solid #e8eef8;
+  padding: 14px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  flex-wrap: wrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.trust-item .trust-icon {
+  width: 20px;
+  height: 20px;
+  background: #1a56db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.trust-divider {
+  width: 1px;
+  height: 20px;
+  background: #dde4f0;
+}
+
+/* ── MAIN CONTENT WRAPPER ────────────────────────────────────────────────── */
+.page-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 56px;
+}
+
+/* ── VIDEO SECTION ───────────────────────────────────────────────────────── */
+.video-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(26,86,219,0.09);
+  padding: 36px 36px 32px;
+  margin: 36px 0 28px;
+  border-top: 4px solid #1a56db;
+}
+.video-section-label {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1a56db;
+  margin-bottom: 16px;
+}
+.video-placeholder {
+  border: 2.5px dashed #1a56db;
+  border-radius: 8px;
+  background: #eef2fb;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #1a56db;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.video-placeholder .play-icon {
+  width: 56px;
+  height: 56px;
+  background: #1a56db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-placeholder .play-icon::after {
+  content: '';
+  border-style: solid;
+  border-width: 10px 0 10px 18px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 4px;
+}
+
+/* ── REGISTER SECTION ────────────────────────────────────────────────────── */
+.register-section {
+  background: #dce8fb;
+  border-left: 5px solid #c0392b;
+  border-radius: 10px;
+  padding: 40px 44px 44px;
+  margin: 0 0 28px;
+}
+.register-section h2 {
+  color: #1a56db;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.register-section .register-sub {
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 26px;
+}
+.register-form {
+  background: #fff;
+  border-radius: 10px;
+  padding: 32px 36px 36px;
+  max-width: 540px;
+  margin: 0 auto;
+  box-shadow: 0 2px 14px rgba(26,86,219,0.08);
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 7px;
+}
+.form-group label .req { color: #c0392b; margin-left: 2px; }
+.form-group input {
+  width: 100%;
+  padding: 11px 15px;
+  border: 1.5px solid #c5d5f0;
+  border-radius: 6px;
+  font-size: 0.97rem;
+  color: #1a1a2e;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.form-group input:focus {
+  border-color: #1a56db;
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.12);
+}
+.btn-register {
+  display: block;
+  width: 100%;
+  background: #1a56db;
+  color: #fff;
+  font-size: 1.02rem;
+  font-weight: 700;
+  padding: 15px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  margin-top: 10px;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn-register:hover { background: #1443b0; transform: translateY(-1px); }
+.btn-register:active { transform: translateY(0); }
+.form-privacy {
+  text-align: center;
+  font-size: 0.78rem;
+  color: #888;
+  margin-top: 12px;
+}
+
+/* ── WHAT YOU'LL LEARN ───────────────────────────────────────────────────── */
+.learn-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(26,86,219,0.09);
+  padding: 36px 40px 32px;
+  margin-bottom: 28px;
+  border-top: 4px solid #c0392b;
+}
+.learn-section h2 {
+  color: #1a56db;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.learn-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+}
+.learn-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.96rem;
+  color: #333;
+  line-height: 1.5;
+}
+.learn-list li::before {
+  content: '✓';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  background: #1a56db;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 900;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* ── PRESENTER SECTION ───────────────────────────────────────────────────── */
+.presenter-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(26,86,219,0.09);
+  padding: 40px 40px 36px;
+  margin-bottom: 28px;
+}
+.presenter-section h2 {
+  color: #1a56db;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.presenter-bio {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.presenter-photo {
+  flex-shrink: 0;
+  width: 168px;
+  height: 192px;
+  background: #eef2fb;
+  border: 1.5px solid #c5d5f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a56db;
+  font-size: 0.84rem;
+  text-align: center;
+  padding: 14px;
+  line-height: 1.5;
+}
+.presenter-bio-text h3 {
+  color: #1a56db;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.presenter-bio-text p {
+  color: #333;
+  font-size: 0.97rem;
+  margin-bottom: 13px;
+  line-height: 1.65;
+}
+
+/* ── ABOUT AIPAC ─────────────────────────────────────────────────────────── */
+.about-section {
+  background: #eef2fb;
+  border-top: 4px solid #c0392b;
+  border-radius: 10px;
+  padding: 44px 44px 40px;
+  margin-bottom: 0;
+}
+.about-section .aipac-brand-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.about-section .aipac-brand-header .brand-logo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #1a56db;
+}
+.about-section .aipac-brand-header .brand-sep {
+  width: 1px;
+  height: 28px;
+  background: #c5d5f0;
+}
+.about-section .aipac-brand-header .brand-sub {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.4;
+  max-width: 200px;
+}
+.about-section h2 {
+  color: #1a56db;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about-section p {
+  color: #333;
+  font-size: 0.97rem;
+  margin-bottom: 14px;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+.about-section p:last-child { margin-bottom: 0; }
+
+/* ── FOOTER ──────────────────────────────────────────────────────────────── */
+.site-footer {
+  background: #1a1a2e;
+  color: rgba(255,255,255,0.65);
+  text-align: center;
+  padding: 32px 16px;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.footer-tagline {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.8rem;
+  margin-bottom: 14px;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.footer-links a:hover { color: #fff; text-decoration: underline; }
+.footer-copy {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+}
+
+/* ── INDEX PAGE ──────────────────────────────────────────────────────────── */
+.index-hero {
+  background: linear-gradient(135deg, #1443b0 0%, #1a56db 55%, #1e6ae0 100%);
+  text-align: center;
+  padding: 72px 32px 76px;
+  position: relative;
+  overflow: hidden;
+}
+.index-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.index-hero .aipac-wordmark {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+}
+.index-hero h1 {
+  color: #fff;
+  font-size: 2.7rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.index-hero p {
+  color: rgba(255,255,255,0.88);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 28px;
+  position: relative;
+}
+.index-hero .hero-divider {
+  width: 60px;
+  height: 3px;
+  background: #c0392b;
+  margin: 0 auto 28px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.threat-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 52px 20px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 28px;
+}
+.threat-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 18px rgba(26,86,219,0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #1a56db;
+}
+.threat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(26,86,219,0.2);
+}
+.threat-card-body {
+  padding: 24px 26px 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.threat-card-body .threat-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #c0392b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.threat-card-body h2 {
+  color: #1a56db;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.threat-card-body p {
+  color: #555;
+  font-size: 0.93rem;
+  line-height: 1.62;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.threat-card-body .card-cta {
+  display: block;
+  background: #1a56db;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 11px 20px;
+  border-radius: 6px;
+  text-align: center;
+  transition: background 0.2s;
+  letter-spacing: 0.3px;
+}
+.threat-card:hover .card-cta { background: #1443b0; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width: 680px) {
+  .site-header { padding: 0 16px; }
+  .header-tagline { display: none; }
+  .hero-banner { padding: 40px 18px 44px; }
+  .hero-banner h1 { font-size: 1.6rem; }
+  .trust-bar { gap: 14px; padding: 12px 16px; }
+  .trust-divider { display: none; }
+  .page-body { padding: 0 12px 40px; }
+  .video-section { padding: 20px 16px; }
+  .register-section { padding: 24px 14px 28px; border-left: none; border-top: 5px solid #c0392b; }
+  .register-form { padding: 20px 16px; }
+  .learn-list { grid-template-columns: 1fr; }
+  .presenter-section { padding: 24px 16px; }
+  .presenter-bio { flex-direction: column; }
+  .presenter-photo { width: 100%; height: 130px; }
+  .about-section { padding: 28px 18px; }
+  .index-hero h1 { font-size: 1.85rem; }
+  .threat-grid { padding: 28px 14px 40px; gap: 20px; }
+}
+
+/* ── THANK YOU PAGE ──────────────────────────────────────────────────────── */
+.thankyou-hero {
+  background: linear-gradient(135deg, #1443b0 0%, #1a56db 55%, #1e6ae0 100%);
+  text-align: center;
+  padding: 56px 32px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.thankyou-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.thankyou-hero .check-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: rgba(255,255,255,0.15);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+.thankyou-hero h1 {
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 800;
+  max-width: 780px;
+  margin: 0 auto 14px;
+  line-height: 1.22;
+  position: relative;
+}
+.thankyou-hero .subhead {
+  color: rgba(255,255,255,0.88);
+  font-size: 1.05rem;
+  max-width: 580px;
+  margin: 0 auto;
+  line-height: 1.65;
+  position: relative;
+}
+
+/* Main briefing video on thank you page */
+.main-video-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(26,86,219,0.09);
+  padding: 36px 36px 32px;
+  margin: 36px 0 28px;
+  border-top: 4px solid #1a56db;
+}
+.main-video-section .section-label {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1a56db;
+  margin-bottom: 16px;
+}
+.main-video-section .video-placeholder {
+  border: 2.5px dashed #1a56db;
+  border-radius: 8px;
+  background: #eef2fb;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #1a56db;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.main-video-section .play-icon {
+  width: 64px;
+  height: 64px;
+  background: #1a56db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-video-section .play-icon::after {
+  content: '';
+  border-style: solid;
+  border-width: 12px 0 12px 22px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 5px;
+}
+
+/* Prepare section */
+.prepare-section {
+  margin: 0 0 40px;
+}
+.prepare-section h2 {
+  color: #1a56db;
+  font-size: 1.7rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.prepare-section .prepare-sub {
+  text-align: center;
+  color: #555;
+  font-size: 0.97rem;
+  margin-bottom: 32px;
+}
+.prepare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.prepare-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(26,86,219,0.09);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid #1a56db;
+}
+.prepare-card .card-video {
+  background: #eef2fb;
+  border-bottom: 1.5px solid #dde8f8;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #1a56db;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 16px;
+}
+.prepare-card .card-play {
+  width: 40px;
+  height: 40px;
+  background: #1a56db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.prepare-card .card-play::after {
+  content: '';
+  border-style: solid;
+  border-width: 7px 0 7px 13px;
+  border-color: transparent transparent transparent #fff;
+  margin-left: 3px;
+}
+.prepare-card .card-body {
+  padding: 18px 20px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.prepare-card .card-num {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #c0392b;
+  margin-bottom: 6px;
+}
+.prepare-card .card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a56db;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.prepare-card .card-copy {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.6;
+  flex: 1;
+}
+
+@media (max-width: 820px) {
+  .prepare-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .prepare-grid { grid-template-columns: 1fr; }
+  .thankyou-hero h1 { font-size: 1.55rem; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-left">
+      <a class="logo" href="index.html">
+        <div class="logo-flag">
+          <span class="stripe-top"></span>
+          <span class="stripe-mid"></span>
+          <span class="stripe-bottom"></span>
+        </div>
+        AIPAC
+      </a>
+      <div class="header-divider"></div>
+      <div class="header-tagline">American Israel<br>Public Affairs Committee</div>
+    </div>
+    <span class="series-label">Policy Briefing Series</span>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-banner">
+    <h1>1,925 Ceasefire Violations in 3 Months.<br>Hezbollah Refuses to Disarm.</h1>
+    <p class="subhead">The ceasefire is a fiction. Hezbollah has violated it nearly 2,000 times. They're rebuilding their arsenal with IRGC support. Israeli families are living under constant threat — and the international community is doing nothing about it.</p>
+    <a href="#register" class="hero-cta-btn">Register for the Free Briefing</a>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><div class="trust-icon">✓</div> Free to Attend</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><div class="trust-icon">✓</div> Expert Policy Analysts</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><div class="trust-icon">✓</div> Live Q&amp;A Included</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><div class="trust-icon">✓</div> Bipartisan Briefing</div>
+  </div>
+
+  <div class="page-body">
+
+    <!-- VIDEO -->
+    <div class="video-section">
+      <div class="video-section-label">Briefing Preview</div>
+      <div class="video-placeholder">
+        <div class="play-icon"></div>
+        <span>[Video Placeholder — Insert briefing video here]</span>
+      </div>
+    </div>
+
+    <!-- WHAT YOU'LL LEARN -->
+    <div class="learn-section">
+      <h2>What You'll Learn in This Briefing</h2>
+      <ul class="learn-list">
+        <li>The full scope of Hezbollah's ceasefire violations and what they signal</li>
+        <li>How Iran's IRGC is directing and funding Hezbollah's rearming operation</li>
+        <li>The missile arsenal Hezbollah is rebuilding — and the ranges that threaten Israeli cities</li>
+        <li>Why the international monitoring force has failed to enforce the ceasefire</li>
+        <li>What Congress can do to pressure Lebanon and hold Hezbollah accountable</li>
+        <li>How AIPAC is mobilizing supporters to demand stronger U.S. action</li>
+      </ul>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="register-section" id="register">
+      <h2>Register for the Briefing</h2>
+      <p class="register-sub">Secure your free spot — limited seats available</p>
+      <div class="register-form">
+        <div class="form-group">
+          <label>Full Name <span class="req">*</span></label>
+          <input type="text" placeholder="Your full name" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label>Email Address <span class="req">*</span></label>
+          <input type="email" placeholder="your@email.com" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(555) 000-0000" autocomplete="tel" />
+        </div>
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" placeholder="Your city" autocomplete="address-level2" />
+        </div>
+        <button class="btn-register">Register for the Free Briefing</button>
+        <p class="form-privacy">🔒 Your information is secure. AIPAC will never sell your data.</p>
+      </div>
+    </div>
+
+    <!-- PRESENTER -->
+    <div class="presenter-section">
+      <h2>About the Presenter</h2>
+      <div class="presenter-bio">
+        <div class="presenter-photo">[Presenter Photo Placeholder]</div>
+        <div class="presenter-bio-text">
+          <h3>Policy Expert Name</h3>
+          <p>Our expert brings decades of experience in Middle East security, Hezbollah's military structure, and Israeli border policy. They have briefed members of Congress, worked with leading defense think tanks, and advised policymakers on Lebanon strategy.</p>
+          <p>In this briefing, they'll provide an insider's perspective on the ceasefire's fragility, Hezbollah's IRGC-directed rearming operation, and what Congress needs to do to protect Israeli families on the northern border.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT AIPAC -->
+    <div class="about-section">
+      <div class="aipac-brand-header">
+        <div class="brand-logo">AIPAC</div>
+        <div class="brand-sep"></div>
+        <div class="brand-sub">American Israel Public Affairs Committee</div>
+      </div>
+      <h2>About AIPAC</h2>
+      <p>The American Israel Public Affairs Committee (AIPAC) is a bipartisan pro-Israel advocacy organization dedicated to strengthening the U.S.-Israel relationship. For over 60 years, AIPAC has worked to ensure that America's support for Israel is both strong and enduring.</p>
+      <p>AIPAC educates members of Congress, the Executive Branch, and the American public about the importance of the U.S.-Israel relationship. Through policy briefings, advocacy campaigns, and grassroots mobilization, AIPAC ensures that pro-Israel voices are heard in Washington and across America.</p>
+      <p>This briefing series is part of AIPAC's commitment to educating Americans about critical threats to Israel and the Middle East, and empowering supporters to take action.</p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-logo">AIPAC</div>
+    <div class="footer-tagline">Strengthening the U.S.-Israel Relationship Since 1963</div>
+    <div class="footer-links">
+      <a href="index.html">All Briefings</a>
+      <a href="threat1.html">Iran's Nuclear Program</a>
+      <a href="threat3.html">Congressional Support</a>
+      <a href="threat4.html">Regional Escalation</a>
+      <a href="threat5.html">Hamas &amp; Gaza</a>
+    </div>
+    <div class="footer-copy">© 2026 AIPAC — American Israel Public Affairs Committee. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
